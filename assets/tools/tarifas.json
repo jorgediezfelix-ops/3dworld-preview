@@ -1,0 +1,53 @@
+{
+  "_nota": "Tarifas del cotizador, la calculadora de impresión y la de lotes en herramientas.html. MXN con IVA. Deben coincidir con content/precios-servicios.json: una pieza FDM desde $290 y desde $95 por pieza en lotes de 20 o más.",
+  "fdm": {
+    "preparacion_pedido": 150,
+    "preparacion_placa": 45,
+    "calentamiento_min": 6,
+    "minimo_pieza": 290,
+    "minimo_lote": 95,
+    "lote_desde": 20,
+    "cama_mm": [250, 250, 250],
+    "separacion_mm": 6,
+    "hora": {"estandar": 60, "camara": 85, "compuesto": 110, "alta_temp": 380},
+    "descuento_maquina": [[10, 0.05], [50, 0.1], [200, 0.15], [1000, 0.2]]
+  },
+  "materiales": {
+    "PLA": {"g": 0.75, "hora": "estandar"},
+    "PETG": {"g": 0.8, "hora": "estandar"},
+    "ABS": {"g": 0.85, "hora": "camara"},
+    "ASA": {"g": 1.0, "hora": "camara"},
+    "TPU": {"g": 1.4, "hora": "estandar", "velocidad": 0.4},
+    "PC": {"g": 1.5, "hora": "camara", "velocidad": 0.7},
+    "PA": {"g": 1.9, "hora": "camara", "velocidad": 0.75},
+    "PETG-CF": {"g": 1.6, "hora": "compuesto", "velocidad": 0.85},
+    "PA-CF": {"g": 2.8, "hora": "compuesto", "velocidad": 0.75},
+    "PA-GF": {"g": 2.4, "hora": "compuesto", "velocidad": 0.75},
+    "PEI": {"g": 9.5, "hora": "alta_temp", "velocidad": 0.5, "dias_bajo_pedido": 10},
+    "PEEK": {"g": 14, "hora": "alta_temp", "velocidad": 0.5, "dias_bajo_pedido": 10}
+  },
+  "calidades": [
+    {"id": "fina", "nombre": "Fina (capa 0.12 mm)", "capa": 0.12, "flujo": 3.5},
+    {"id": "estandar", "nombre": "Estándar (capa 0.2 mm)", "capa": 0.2, "flujo": 7},
+    {"id": "rapida", "nombre": "Rápida (capa 0.28 mm)", "capa": 0.28, "flujo": 10}
+  ],
+  "acabados": [
+    {"id": "estandar", "nombre": "Estándar", "cm2": 0, "pieza": 0, "dias": 0},
+    {"id": "lijado", "nombre": "Lijado", "cm2": 0.45, "pieza": 25, "dias": 1},
+    {"id": "pintura", "nombre": "Primer y pintura", "cm2": 1.1, "pieza": 60, "dias": 2},
+    {"id": "insertos", "nombre": "Insertos roscados (4)", "cm2": 0, "pieza": 48, "dias": 0},
+    {"id": "vapor", "nombre": "Alisado con vapor", "cm2": 0.3, "pieza": 30, "dias": 1, "materiales": ["ABS", "ASA"]}
+  ],
+  "sls": {
+    "material": "PA12",
+    "densidad": 1.01,
+    "cm3": 9.5,
+    "pieza": 22,
+    "preparacion_pedido": 350,
+    "minimo_pedido": 1490,
+    "camara_mm": [300, 300, 300],
+    "dias": 8,
+    "descuento": [[50, 0.08], [200, 0.15], [1000, 0.22]]
+  },
+  "capacidad": {"impresoras": 10, "horas_dia": 20, "dias_revision": 1, "dias_envio": 1}
+}

@@ -1,0 +1,193 @@
+/* Photographic art direction. Kept separate from the original engineering UI. */
+.photo-hero{isolation:isolate;background:#071522}
+.photo-hero>.hero-photo{position:absolute;inset:0;z-index:-2;display:block}
+.photo-hero>.hero-photo img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:var(--photo-position,center)}
+.photo-hero:before{inset:0;width:auto;height:auto;z-index:-1;background:linear-gradient(90deg,rgba(4,15,26,.97) 0%,rgba(4,15,26,.88) 32%,rgba(4,15,26,.48) 60%,rgba(4,15,26,.12) 100%);mask-image:none;background-size:auto;pointer-events:none}
+.photo-hero:after{inset:0;width:auto;height:auto;z-index:-1;background:linear-gradient(0deg,rgba(4,15,26,.6),transparent 45%);pointer-events:none}
+.hero.photo-hero .hero-main{display:block;min-height:680px}
+.hero.photo-hero .hero-copy{max-width:710px;padding:90px 0 76px}
+.photo-hero .hero-desc,.photo-hero.page-hero p{color:#d6e1e8}
+.photo-hero .page-hero-inner{z-index:1;min-height:500px;padding-block:84px}
+.photo-hero .service-hero-copy{width:min(77%,850px)}
+.photo-hero .giant-num{display:none}
+.photo-hero .breadcrumb{line-height:1.9;color:#c3d5e1}
+.photo-hero .breadcrumb span{color:#a3bdcf}
+.photo-hero .breadcrumb a{color:#d0eaff}
+.photo-hero .hero-bottom{color:#c1d2df}
+.photo-hero .hero-bottom b{color:#e5eff6}
+.card-art.photo-frame,.tech-visual.photo-frame,.project-visual.photo-frame{display:block;position:relative;overflow:hidden;background:#e8eef2}
+.service-card .card-art.photo-frame{height:auto;aspect-ratio:3/2;margin:23px -30px 24px;flex-shrink:0}
+.photo-frame picture{display:block;width:100%;height:100%}
+.photo-frame img,.service-card .card-art.photo-frame img,.tech-visual.photo-frame img,.project-visual.photo-frame img,.split-visual.photo-frame img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;object-position:var(--photo-position,center);filter:none;animation:none;opacity:1;transition:transform .6s ease}
+.service-card:hover .photo-frame img,.portfolio-card:hover .photo-frame img{transform:scale(1.035)}
+.service-card{min-height:475px}
+.service-card .service-top{color:#536b7c}
+.service-card .service-num{color:#5e7789}
+.service-card h3{margin-top:8px}
+.service-card p{max-width:none}
+.split-visual.photo-frame{margin:58px 0 58px 35px;min-height:520px;overflow:hidden;display:block}
+.split-visual.photo-frame .float-label{left:24px;bottom:24px;right:24px;width:fit-content;background:rgba(4,20,34,.85);color:#d2e4f1;backdrop-filter:blur(8px)}
+.tech-visual.photo-frame{height:auto;aspect-ratio:3/2;min-height:0}
+.tech-visual.photo-frame .tech-index{padding:8px 10px;background:#071522d9;color:#e1f0fa;top:18px;left:18px}
+.project-visual.photo-frame{height:auto;aspect-ratio:3/2}
+.project-visual.photo-frame:after{color:#e1f0fa;background:#071522db;padding:8px 10px;top:18px;left:18px;font-size:9px}
+.detail-card.photo-card{padding-top:0;overflow:hidden}
+.detail-card>.module-photo{display:block;height:auto;aspect-ratio:3/2;margin:0 -37px 28px;background:#e8eef2;flex-shrink:0}
+.module-photo img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:var(--photo-position,center)}
+.detail-card.photo-card .detail-index{margin-bottom:22px}
+.material-card.photo-card{padding-top:0;overflow:hidden}
+.material-card>.module-photo{height:auto;aspect-ratio:3/2;margin:0 -26px 24px}
+.industry-card.photo-card{background:#071522;color:white;min-height:350px;border-color:#102536;isolation:isolate;justify-content:flex-end}
+.industry-card.photo-card:before{inset:0;width:auto;height:auto;transform:none;border:0;z-index:-1;background:linear-gradient(0deg,rgba(4,15,26,.98),rgba(4,15,26,.1) 95%)}
+.industry-card.photo-card:after{display:none}
+.industry-card.photo-card>.module-photo{position:absolute;inset:0;z-index:-2;margin:0;height:100%}
+.industry-card.photo-card .industry-icon{display:none}
+.industry-card.photo-card p{color:#c5d6e2}
+.industry-card.photo-card h3{font-size:21px}
+.editorial-photo{margin:0 0 48px;background:#e8eef2;overflow:hidden}
+.editorial-photo picture{display:block;width:100%;aspect-ratio:21/9}
+.editorial-photo img{width:100%;height:100%;object-fit:cover;object-position:var(--photo-position,center)}
+.editorial-photo figcaption{background:#f1f5f7;padding:14px 20px;color:#4f687a;font-size:10px;letter-spacing:.12em;text-transform:uppercase;line-height:1.65}
+.contact-aside .editorial-photo{margin-top:34px}
+.contact-aside .editorial-photo picture{aspect-ratio:4/3}
+.steps-vertical .big-step{grid-template-columns:90px 1fr 1fr;gap:30px}
+.big-step .step-photo{grid-column:1/-1;height:240px;display:block;overflow:hidden}
+.step-photo img{width:100%;height:100%;object-fit:cover}
+.digital-study{position:relative;background:#071522;color:#fff;overflow:hidden;margin-top:0}
+.digital-study>.container{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px;min-height:430px}
+.digital-study .study-copy{padding:60px 0}
+.digital-study h2{font-size:clamp(31px,3.2vw,46px);margin:20px 0}
+.digital-study p{color:#b3c7d6;font-size:14px;max-width:420px}
+.digital-study .service-model{position:relative;inset:auto;width:100%;height:390px;opacity:1}
+.digital-study .hero-side{position:relative;inset:auto;width:100%;height:400px;opacity:1;margin:0}
+.digital-study .technical-stamp{top:7%;left:0}
+.digital-study .orbit-tag{bottom:7%;right:0}
+.digital-study .service-model-label{right:0;bottom:5%}
+.photo-cta{isolation:isolate;background:#0b263d}
+.photo-cta>.cta-photo{position:absolute;inset:0;z-index:-2}
+.photo-cta>.cta-photo img{height:100%;width:100%;object-fit:cover;object-position:70% 55%}
+.photo-cta:after{inset:0;width:auto;height:auto;border:0;transform:none;z-index:-1;background:linear-gradient(90deg,#06233bf5,#06233b80)}
+.site-footer .image-disclosure{font-size:10px;color:#93adbf;line-height:1.65;max-width:none;margin:0 0 22px}
+@media(min-width:941px){
+ .photo-hero[data-photo="ingenieria"]>.hero-photo{left:35%;display:flex;justify-content:flex-end}
+ .photo-hero[data-photo="ingenieria"]>.hero-photo img{width:auto;height:100%;max-width:100%;object-fit:contain;object-position:right center;mask-image:linear-gradient(90deg,transparent,#000 30%)}
+}
+@media(max-width:940px){
+ .hero.photo-hero .hero-copy{max-width:650px}
+ .photo-hero:before{background:linear-gradient(90deg,rgba(4,15,26,.96),rgba(4,15,26,.75) 54%,rgba(4,15,26,.35))}
+ .split-visual.photo-frame{margin:15px 0 60px;min-height:400px;height:480px}
+ .photo-hero .service-hero-copy{width:100%}
+ .digital-study>.container{grid-template-columns:1fr 1fr;gap:18px}
+ .digital-study .hero-side,.digital-study .service-model{height:340px}
+ .industry-card.photo-card{min-height:330px}
+}
+@media(max-width:650px){
+ .hero.photo-hero{min-height:750px}
+ .hero.photo-hero .hero-main{min-height:750px}
+ .hero.photo-hero .hero-copy{padding-top:65px;padding-bottom:160px;max-width:100%}
+ .photo-hero>.hero-photo img{object-position:var(--photo-position-mobile,68% center)}
+ .photo-hero:before{background:linear-gradient(90deg,rgba(4,15,26,.93),rgba(4,15,26,.68)),linear-gradient(0deg,rgba(4,15,26,.2),transparent)}
+ .photo-hero .page-hero-inner{min-height:440px;padding:65px 0}
+ .photo-hero.page-hero h1{font-size:clamp(41px,10.7vw,62px);line-height:1.06}
+ .photo-hero.page-hero p{font-size:14px}
+ .service-card .card-art.photo-frame{height:auto}
+ .split-visual.photo-frame{min-height:300px;height:350px;margin-bottom:45px}
+ .detail-card>.module-photo{height:auto}
+ .material-card>.module-photo{height:auto}
+ .editorial-photo picture{aspect-ratio:4/3}
+ .steps-vertical .big-step{grid-template-columns:45px 1fr;gap:15px}
+ .steps-vertical .big-step p{grid-column:2}
+ .digital-study>.container{display:block}
+ .digital-study .study-copy{padding:45px 0 0}
+ .digital-study .service-model,.digital-study .hero-side{height:320px}
+ .digital-study .technical-stamp{font-size:8px}
+ .digital-study .service-model-label{right:0;bottom:5%}
+ .industry-card.photo-card{min-height:360px}
+}
+@media(prefers-reduced-motion:reduce){.photo-frame img{transition:none!important}}
+@media(max-width:800px){
+ .split-grid{grid-template-columns:minmax(0,1fr);gap:0}
+ .split-copy{min-width:0;padding-top:48px}
+ .split-visual.photo-frame{
+  width:100%;
+  min-width:0;
+  min-height:0;
+  height:auto;
+  aspect-ratio:3/2;
+  margin:16px 0 42px;
+ }
+}
+.digital-study .service-model{
+ isolation:isolate;
+ min-width:0;
+ overflow:hidden;
+ border:1px solid rgba(119,190,228,.25);
+ border-radius:14px;
+ background:
+  radial-gradient(ellipse at 56% 44%,rgba(27,104,151,.2),transparent 54%),
+  linear-gradient(145deg,#0b2031,#06111c 68%,#0b1c2a);
+ box-shadow:0 28px 68px rgba(0,0,0,.3),inset 0 1px rgba(255,255,255,.07);
+}
+.service-model-fallback{
+ position:absolute;
+ z-index:0;
+ inset:0;
+ display:block;
+ overflow:hidden;
+ background:#0a1a28;
+}
+.service-model-fallback:after{
+ position:absolute;
+ inset:0;
+ background:linear-gradient(180deg,rgba(5,17,28,.02) 45%,rgba(5,17,28,.38) 100%);
+ content:"";
+ pointer-events:none;
+}
+.service-model-fallback img{
+ display:block;
+ width:100%;
+ height:100%;
+ max-width:none;
+ object-fit:cover;
+ object-position:var(--model-position,center);
+ filter:saturate(.88) contrast(1.04);
+}
+.service-model-canvas{
+ position:absolute;
+ z-index:1;
+ inset:0;
+ opacity:0;
+ transition:opacity .35s ease;
+}
+.service-model.is-rendered .service-model-canvas{opacity:1}
+.service-model.is-rendered .service-model-fallback{display:none}
+.service-model-label{
+ z-index:2;
+ right:16px;
+ bottom:16px;
+ padding:13px 16px;
+ border:1px solid rgba(164,211,239,.36);
+ border-radius:8px;
+ background:rgba(5,18,29,.82);
+ box-shadow:0 10px 24px rgba(0,0,0,.24);
+ color:#d5eaf7;
+ backdrop-filter:blur(12px);
+}
+.service-model-label span{color:#b6d5e8}
+.service-model-label b{font-size:10px;letter-spacing:.11em}
+.digital-study[data-service-3d="ingenieria-avanzada"] .service-model-fallback img{object-position:72% center}
+.digital-study[data-service-3d="prototipado-rapido"] .service-model-fallback img{object-position:center}
+.digital-study[data-service-3d="manufactura-aditiva"] .service-model-fallback img{object-position:66% center}
+.digital-study[data-service-3d="series-cortas"] .service-model-fallback img{object-position:center}
+.digital-study[data-service-3d="escaneo-inspeccion-3d"] .service-model-fallback img{object-position:67% center}
+.digital-study[data-service-3d="investigacion-materiales"] .service-model-fallback img{object-position:center}
+@media(max-width:800px){
+ .digital-study .service-model{
+  width:100%;
+  height:clamp(320px,92vw,410px);
+  margin:16px 0 38px;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ .service-model-canvas{transition:none}
+}

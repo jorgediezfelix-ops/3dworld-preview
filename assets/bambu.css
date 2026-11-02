@@ -1,0 +1,78 @@
+/* Bambu Lab product collection within the shared 3DWORLD shop. */
+.bambu-catalog { background: #f1f5f8; }
+.bambu-catalog .shop-kicker { color: #075487; }
+.bambu-intro { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 60px; padding-bottom: 42px; }
+.bambu-brand { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin: 26px 0 24px; font: 600 29px var(--font-display); letter-spacing: -.05em; }
+.bambu-brand > i { width: 8px; height: 27px; background: #008c38; border-radius: 2px; }
+.bambu-brand > span { border-left: 1px solid #bdcbd7; padding-left: 14px; margin-left: 5px; font: 10px var(--font-mono); letter-spacing: .06em; color: #445568; }
+.bambu-intro h2 { font-size: clamp(36px, 4.5vw, 62px); margin: 0 0 23px; }
+.bambu-intro > div > p { max-width: 620px; color: #445568; font-size: 14px; line-height: 1.85; }
+.bambu-catalog-index { border-left: 1px solid #c6d5e1; padding-left: 30px; align-self: end; }
+.bambu-catalog-index > strong { display: block; font: 400 98px/.95 var(--font-display); letter-spacing: -.08em; color: #102c43; }
+.bambu-catalog-index > span { display: block; font: 9px var(--font-mono); margin: 15px 0 20px; color: #445568; }
+.bambu-catalog-index > p { font-size: 12px !important; line-height: 2 !important; margin: 0; }
+.bambu-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 18px 0 26px; border-top: 1px solid #c6d5e1; }
+.bambu-filters { display: flex; flex-wrap: wrap; gap: 7px; }
+.bambu-filter { min-height: 44px; padding: 10px 15px; border: 1px solid #b8cbdc; border-radius: 6px; color: #284a65; background: #fff; font: 600 11px var(--font-body); }
+.bambu-filter:hover { border-color: #075bc8; color: #075bc8; }
+.bambu-filter.is-active { color: #fff; border-color: #0b2339; background: #0b2339; }
+#bambu-count { color: #445568; white-space: nowrap; font: 10px var(--font-mono); }
+.bambu-product { padding-top: 0; }
+.bambu-product .bambu-photo { aspect-ratio: 4/3; background: #f6f7f8; position: relative; }
+.bambu-photo img { object-fit: contain; object-position: center; transition: transform .4s; }
+#bambu-a1-mini .bambu-photo img { clip-path: inset(20% 0 0); }
+#bambu-x1e .bambu-photo img { object-fit: cover; object-position: center bottom; }
+.bambu-photo.is-dark { background: #05080c; }
+.bambu-product:hover .bambu-photo img { transform: scale(1.025); }
+.bambu-product-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 3px; }
+.bambu-status { border-radius: 4px; padding: 6px 8px; background: #e9f2fc; color: #164f7b; font: 9px var(--font-mono); letter-spacing: .03em; }
+.bambu-status.is-legacy { background: #f3eee3; color: #6d5417; }
+.bambu-status.is-announced { background: #e7f3ed; color: #17623d; }
+.bambu-maker { font: 9px var(--font-mono); color: #4c6174; white-space: nowrap; }
+.bambu-product h3 { margin: 16px 0 13px; font-size: 35px; letter-spacing: -.06em; }
+.bambu-product > p { line-height: 1.85; }
+.bambu-features { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 20px; }
+.bambu-features > span { border: 1px solid #d6e1eb; border-radius: 4px; padding: 6px 8px; color: #3b556c; background: #f8fafc; font: 9px/1.5 var(--font-mono); }
+.bambu-product .bambu-configuration { display: block; font: 11px/1.7 var(--font-body); color: #445568; border-top: 1px solid #e0e7ee; padding-top: 16px; }
+.bambu-source { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 44px; margin-top: 6px; color: #075487; font-size: 11px; font-weight: 600; }
+.bambu-source .ui-icon { width: 15px; height: 15px; }
+.bambu-product .quote-add { margin-top: 10px; }
+.bambu-empty { padding: 28px; margin-bottom: 25px; background: #fff; border: 1px dashed #a9bfd2; border-radius: 8px; color: #445568; }
+.bambu-advice { display: flex; align-items: center; gap: 40px; justify-content: space-between; margin-top: 35px; padding: 28px 30px; border: 1px solid #ccdce8; border-radius: 10px; background: #fff; }
+.bambu-advice strong { font: 600 21px/1.4 var(--font-display); letter-spacing: -.035em; }
+.bambu-advice p { max-width: 740px; font-size: 12px; line-height: 1.85; color: #445568; margin: 10px 0 0; }
+.bambu-advice .shop-quote { margin: 0; flex-shrink: 0; }
+.bambu-catalog-note { margin-top: 18px; }
+.bambu-catalog-note summary { display: flex; align-items: center; justify-content: space-between; min-height: 44px; color: #445568; font-size: 11px; }
+.bambu-catalog-note summary > span { font-size: 22px; }
+.bambu-catalog-note p { max-width: 950px; color: #445568; font-size: 12px; line-height: 1.85; }
+@media (max-width: 1080px) {
+  .bambu-intro { gap: 30px; grid-template-columns: minmax(0, 1fr) 180px; }
+  .bambu-toolbar { align-items: start; }
+  #bambu-count { padding-top: 14px; }
+  .bambu-advice { gap: 25px; }
+}
+@media (max-width: 650px) {
+  .bambu-intro { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 30px; }
+  .bambu-brand { font-size: 28px; margin-top: 25px; }
+  .bambu-brand > span { width: 100%; border: 0; padding: 0 0 0 20px; margin: 0; }
+  .bambu-intro h2 { font-size: clamp(34px, 9vw, 48px); }
+  .bambu-catalog-index { display: grid; grid-template-columns: 75px 1fr; gap: 3px 20px; padding: 20px; border: 1px solid #c6d5e1; border-radius: 8px; }
+  .bambu-catalog-index > strong { grid-row: 1/3; font-size: 70px; align-self: center; }
+  .bambu-catalog-index > span { margin: 0; font-size: 8px; }
+  .bambu-catalog-index > p { margin-top: 7px; }
+  .bambu-toolbar { display: block; }
+  .bambu-filter { padding: 10px 12px; font-size: 10px; }
+  #bambu-count { display: block; margin-top: 3px; }
+  .bambu-product h3 { font-size: 34px; }
+  .bambu-advice { align-items: start; flex-direction: column; padding: 24px; gap: 20px; }
+  .bambu-advice .shop-quote { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bambu-photo img { transition: none; }
+  .bambu-product:hover .bambu-photo img { transform: none; }
+}
+@media (forced-colors: active) {
+  .bambu-filter, .bambu-status, .bambu-features > span, .bambu-advice { border: 1px solid CanvasText; }
+  .bambu-filter.is-active { outline: 2px solid Highlight; }
+}

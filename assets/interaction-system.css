@@ -1,0 +1,112 @@
+/* Shared interaction language. Content is readable before JavaScript runs. */
+:root{
+  --motion-feedback:140ms;
+  --motion-state:220ms;
+  --motion-editorial:420ms;
+  --motion-ease:cubic-bezier(.22,.68,.2,1);
+  --focus-ring:#0869b2;
+}
+.atelier-site .reveal,.atelier-site .reveal.visible{opacity:1;transform:none;transition:none}
+.atelier-site :is(a,button,input,select,textarea,summary):focus-visible{
+  outline:3px solid var(--focus-ring);outline-offset:4px;
+}
+.atelier-site :is(.photo-hero,.atelier-hero,.service-editorial,.continuous-footer) :is(a,button):focus-visible{
+  outline-color:#b4e0ff;
+}
+.atelier-site :is(.btn,.project-preview,.dialog-close,.quote-remove,.store-reset,.store-more,.store-chip,.product-thumb){min-height:44px}
+.atelier-site :is(.btn,.text-link,.project-preview,.nav-dropdown summary,.mobile-toggle,.dialog-close){
+  transition:color var(--motion-feedback),background-color var(--motion-feedback),border-color var(--motion-feedback),transform var(--motion-state) var(--motion-ease);
+}
+.atelier-site .btn:hover{transform:none}
+.atelier-site .btn:active{transform:translateY(1px)}
+.atelier-site .btn:hover .arrow{transform:none}
+.atelier-site :is(.btn,.text-link) .arrow{transition:transform var(--motion-state) var(--motion-ease)}
+@media(hover:hover) and (pointer:fine){
+  .atelier-site .btn:hover .arrow{transform:translate(2px,-2px)}
+  .atelier-site .project-preview:hover .ui-icon{transform:translate(2px,-2px)}
+}
+.atelier-site .project-preview .ui-icon{transition:transform var(--motion-state) var(--motion-ease)}
+.atelier-site .photo-hero .section-index{color:#bfccd3}
+.atelier-site .concept-gallery .tag{font-size:12px;color:#155780;letter-spacing:.1em}
+.atelier-site .concept-gallery .concept-meta{font-size:13px;line-height:1.7;letter-spacing:0;color:#455b65;max-width:44ch}
+.atelier-site .concept-gallery .portfolio-content{display:flex;flex-direction:column;padding-top:22px}
+.atelier-site .concept-gallery .portfolio-content h3{margin-bottom:14px}
+.atelier-site .concept-gallery .portfolio-content>p{margin-bottom:16px;max-width:48ch;min-height:3.6em}
+.atelier-site .concept-gallery .project-visual:after{display:none}
+.study-actions{display:flex;gap:12px 24px;align-items:center;justify-content:space-between;margin-top:22px;flex-wrap:wrap}
+.study-service{font-size:13px;color:#174e72;text-decoration:underline;text-underline-offset:4px;display:inline-flex;align-items:center;min-height:44px}
+.project-preview{display:none!important}
+.project-preview-ready .project-preview{display:inline-flex!important}
+.atelier-site .project-preview{font-size:13px;letter-spacing:0;text-transform:none;color:#153d58;padding:10px 0;border:0;background:transparent;gap:14px}
+.atelier-site .progress-track{display:none;width:100%;height:2px;background:#196bb0;transform:scaleX(0);transform-origin:left;transition:none;contain:strict}
+.atelier-site.reading-page .progress-track{display:block}
+.atelier-site dialog.experience-dialog{border-radius:8px;box-shadow:0 24px 80px #020c2059;max-height:calc(100dvh - 40px)}
+.atelier-site dialog.experience-dialog::backdrop{backdrop-filter:none;background:#030b18b8}
+.atelier-site dialog.experience-dialog[open]{animation:interaction-panel-in var(--motion-state) var(--motion-ease)}
+.atelier-site dialog.experience-dialog[open]::backdrop{animation:interaction-backdrop-in var(--motion-feedback) linear}
+@keyframes interaction-panel-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes interaction-backdrop-in{from{opacity:0}to{opacity:1}}
+.atelier-site .project-dialog{width:min(1120px,calc(100vw - 40px));background:#f5f8f7;color:#172a34}
+.atelier-site .project-dialog .dialog-head{padding:24px 28px;position:sticky;top:0;background:#f5f8f7;z-index:2;align-items:center}
+.atelier-site .project-dialog .dialog-head h2{font-size:clamp(27px,3vw,40px);line-height:1.15;margin:8px 0 0}
+.study-dialog-layout{display:grid;grid-template-columns:1.2fr 1fr;align-items:stretch}
+.atelier-site .project-dialog-photo{height:100%;min-height:400px;max-height:64dvh;object-fit:contain;background:#080f14}
+.study-dialog-body{padding:28px;align-self:center}
+.atelier-site .project-dialog-copy{padding:0;font-size:15px;line-height:1.75;color:#3e535d}
+.study-dialog-facts{display:grid;gap:22px;margin:24px 0}
+.study-dialog-facts dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#23587a;margin-bottom:8px}
+.study-dialog-facts dd{margin:0;font-size:14px;line-height:1.75;color:#3e535d}
+.study-dialog-links{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding-top:22px;border-top:1px solid #cbd6da}
+.atelier-site .study-dialog-links .btn{font-size:12px;text-transform:none;letter-spacing:0;padding:12px 16px;line-height:1.4}
+.atelier-site .brief-details{border-block:1px solid #c4d0d5;margin:24px 0}
+.atelier-site .brief-details>summary{list-style:none;display:flex;gap:20px;align-items:center;justify-content:space-between;cursor:pointer;min-height:64px;padding:16px 0;font-size:15px;color:#234e67}
+.brief-details>summary::-webkit-details-marker{display:none}
+.brief-details>summary:after{content:'+';font-size:24px;font-weight:400}
+.brief-details[open]>summary:after{content:'−'}
+.atelier-site .brief-details .brief-engineering{border:0;padding:8px 0 20px;margin:0;min-width:0}
+.atelier-site .brief-details .brief-engineering legend{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap}
+.atelier-site .lead-form :is(input,select,textarea){font-size:16px;min-height:48px}
+.atelier-site .form-status:not(:empty){padding:14px 16px;border-left:3px solid #155d8c;background:#edf4f7;color:#23495d;font-size:14px;line-height:1.7}
+.atelier-site .lead-form[aria-busy=true] [type=submit]{opacity:.7;cursor:progress}
+.atelier-site .no-script-nav{display:flex;flex-wrap:wrap;gap:12px;padding:18px var(--side);background:#f5f8f7;color:#172a34}
+.atelier-site .no-script-nav a{padding:10px;text-decoration:underline}
+@media(max-width:700px){
+  .atelier-site .project-dialog{width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}
+  .atelier-site .project-dialog .dialog-head{padding:18px;gap:12px}
+  .study-dialog-layout{grid-template-columns:1fr}
+  .atelier-site .project-dialog-photo{height:auto;min-height:0;max-height:36dvh;aspect-ratio:4/3;width:100%}
+  .study-dialog-body{padding:22px}
+  .atelier-site .concept-gallery .portfolio-content>p{min-height:0}
+  .study-dialog-links{align-items:stretch;flex-direction:column}
+  .study-dialog-links .btn{justify-content:center}
+}
+@media(prefers-reduced-motion:reduce){
+  .atelier-site,.atelier-site *{scroll-behavior:auto!important}
+  .atelier-site *,.atelier-site *:before,.atelier-site *:after{animation:none!important;transition:none!important}
+  .atelier-site :is(.btn,.arrow,.ui-icon):is(:hover,:active){transform:none!important}
+  .atelier-site .progress-track{display:none}
+}
+@media(forced-colors:active){
+  .atelier-site :is(a,button,input,select,textarea,summary):focus-visible{outline-color:Highlight}
+  .atelier-site :is(.project-dialog,.dialog-head,.form-status){background:Canvas;color:CanvasText}
+  .atelier-site :is(.study-service,.project-preview,.study-dialog-facts dt,.study-dialog-facts dd,.project-dialog-copy){color:CanvasText}
+  .atelier-site .progress-track{display:none}
+}
+/* Functional touch targets, including utilities and native FAQ disclosures. */
+.atelier-site [hidden]{display:none!important}
+.atelier-site :is([data-store-reset],.product-purchase [data-open-cart]){min-height:44px;display:inline-flex;align-items:center}
+.atelier-site .store-faq summary{min-height:60px;display:flex;align-items:center;gap:20px}
+.atelier-site .store-hero .store-label{color:#bfccd3}
+/* Still photography and quiet cards: only the action itself responds to hover. */
+.atelier-site :is(.service-card,.commerce-card,.portfolio-card,.store-card,.shop-product-card):hover{transform:none}
+.atelier-site :is(.project-visual,.service-card,.commerce-card,.portfolio-card,.store-card) img{transition:none}
+.atelier-site :is(.project-visual,.service-card,.commerce-card,.portfolio-card,.store-card):hover img{transform:none}
+/* A horizontal category rail must not determine its parent grid's minimum width. */
+.atelier-site .store-sidebar,.atelier-site .store-results{min-width:0}
+.atelier-site .store-toolbar :is(input,select){min-width:0;font-size:16px}
+@media(max-width:700px){
+  .atelier-site .store-layout{grid-template-columns:minmax(0,1fr)}
+  .atelier-site .store-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .atelier-site .store-result-head{flex-wrap:wrap}
+  .atelier-site .store-empty{overflow-wrap:anywhere}
+}

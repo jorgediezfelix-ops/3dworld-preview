@@ -1,0 +1,40 @@
+/* Footer, WhatsApp button and contact block, on every page (brand palette: night blue, ice blue, DM Sans). */
+.whatsapp-float{position:fixed;right:clamp(14px,2.4vw,28px);bottom:clamp(14px,2.4vw,28px);z-index:60;display:grid;place-items:center;width:60px;height:60px;border-radius:50%;background:#25d366;color:#fff;text-decoration:none;box-shadow:0 10px 28px rgba(7,20,30,.32),0 2px 6px rgba(7,20,30,.2);transition:transform .2s,background-color .2s}
+.whatsapp-float .wa-glyph{width:32px;height:32px}
+.whatsapp-float:hover{background:#1ebe5b;transform:translateY(-2px)}
+.whatsapp-float:focus-visible{outline:3px solid #fff;outline-offset:3px;box-shadow:0 0 0 6px #25d366}
+@media (prefers-reduced-motion:reduce){.whatsapp-float{transition:none}.whatsapp-float:hover{transform:none}}
+@media (max-width:650px){.whatsapp-float{width:56px;height:56px}.whatsapp-float .wa-glyph{width:30px;height:30px}}
+@media print{.whatsapp-float{display:none}}
+.brand-footer{background-color:#05111c;background-image:linear-gradient(180deg,rgba(4,16,27,.92),rgba(4,16,27,.55) 55%,rgba(4,16,27,.35)),url('footer-industrial-blue.png');background-position:center bottom;background-size:cover;background-repeat:no-repeat;color:#c9d7de;font-family:var(--font-body,'DM Sans',Arial,sans-serif);font-size:15px;line-height:1.6;border-top:1px solid rgba(200,219,235,.16)}
+.brand-footer a{color:#e3edf2;text-decoration:none}
+.brand-footer a:hover{color:#fff}
+.brand-footer a:focus-visible{outline:2px solid #c8dbeb;outline-offset:3px;border-radius:3px}
+.footer-cta{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:28px 40px;padding:clamp(64px,7vw,96px) 0 clamp(40px,5vw,56px);border-bottom:1px solid rgba(200,219,235,.18)}
+.footer-cta h2{margin:0;color:#fff;font-size:clamp(32px,4vw,52px);line-height:1.05;letter-spacing:-.035em;font-weight:500}
+.footer-cta h2 em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#c8dbeb}
+.footer-cta p{margin:14px 0 0;color:#a9bcc6;max-width:460px}
+.footer-cta-actions{display:flex;flex-wrap:wrap;gap:12px}
+.footer-cta-wa{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;background:#25d366;color:#fff!important;font-weight:600}
+.footer-cta-wa .wa-glyph{width:20px;height:20px}
+.footer-cta-wa:hover{background:#1ebe5b}
+.brand-footer .footer-directory{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));gap:40px;padding:clamp(44px,5vw,64px) 0}
+.footer-brand-block img{width:220px;height:auto}
+.footer-brand-block>p{margin:18px 0 0;max-width:320px;color:#a9bcc6;font-size:14px}
+.brand-footer .footer-directory nav h3{margin:0 0 16px;color:#8fb3c6;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.brand-footer .footer-directory nav a{display:block;padding:5px 0;font-size:15px;color:#d5e1e7}
+.footer-contact{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;font-size:14px}
+.footer-contact li{display:flex;align-items:center;gap:10px;color:#d5e1e7}
+.footer-contact .footer-icon{width:17px;height:17px;flex:none;fill:none;stroke:#8fb3c6;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.footer-contact-wa a{display:inline-flex;align-items:center;gap:10px;font-weight:600}
+.footer-contact-wa .wa-glyph{width:17px;height:17px;color:#25d366}
+.footer-trust{list-style:none;margin:0;padding:22px 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;border-top:1px solid rgba(200,219,235,.18);border-bottom:1px solid rgba(200,219,235,.18)}
+.footer-trust li{display:grid;gap:2px}
+.footer-trust strong{color:#fff;font-weight:600;font-size:14px}
+.footer-trust span{color:#a9bcc6;font-size:13px}
+.brand-footer .footer-final-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px 28px;padding:22px 0 30px;font-size:13px}
+.brand-footer .footer-copyright{margin:0;color:#a9bcc6}
+.brand-footer .footer-legal{display:flex;flex-wrap:wrap;gap:8px 22px}
+.brand-footer .footer-legal a,.brand-footer .footer-top{color:#c9d7de;font-size:13px}
+@media (max-width:940px){.brand-footer .footer-directory{grid-template-columns:1fr 1fr}.footer-brand-block{grid-column:1/-1}}
+@media (max-width:650px){.brand-footer .footer-directory,.footer-trust{grid-template-columns:1fr}.footer-cta{align-items:flex-start}}

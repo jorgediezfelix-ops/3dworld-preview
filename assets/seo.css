@@ -1,0 +1,23 @@
+/* Crawlable navigation and the product sheet before JavaScript loads. */
+.seo-catalog-directory{border-top:1px solid var(--line,#d5d9db);margin-block:2rem;padding-block:1.5rem}
+.seo-catalog-directory>summary,.seo-variants>summary{cursor:pointer;font-weight:600;padding-block:.75rem}
+.seo-directory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem 2rem;margin-top:1.5rem}
+.seo-directory-grid h3{font-size:1rem;margin-bottom:.75rem}
+.seo-directory-grid ul,.seo-related ul{list-style:none;margin:0;padding:0}
+.seo-directory-grid li{margin-bottom:.65rem;line-height:1.5;overflow-wrap:anywhere}
+.seo-directory-grid a,.seo-related a{text-decoration:underline;text-underline-offset:.25em}
+.seo-directory-grid a:focus-visible,.seo-related a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.seo-related{padding-block:clamp(2.5rem,5vw,4rem);border-top:1px solid var(--line,#d5d9db)}
+.seo-related h2{font-size:clamp(1.5rem,3vw,2.5rem);margin-block:.75rem 1.5rem}
+.seo-related ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem}
+.seo-related a{display:block;line-height:1.6}
+.seo-byline{font-size:.875rem;margin-top:1rem}
+.seo-byline a{text-decoration:underline;text-underline-offset:.2em}
+.seo-variants{margin-block:1.5rem}
+.seo-table-scroll{overflow-x:auto;max-width:100%}
+.seo-variants table{width:100%;border-collapse:collapse;font-size:.875rem}
+.seo-variants th,.seo-variants td{padding:.75rem;text-align:left;border-bottom:1px solid var(--line,#d5d9db)}
+.seo-variants caption{text-align:left;padding-block:.75rem;line-height:1.5}
+[data-product-loading]>nav{margin-block:2rem}
+[data-product-loading] h2{font-size:1.5rem;margin-top:1.5rem}
+@media(max-width:700px){.seo-directory-grid,.seo-related ul{grid-template-columns:1fr}.seo-related ul{gap:1rem}}

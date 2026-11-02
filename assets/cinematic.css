@@ -1,0 +1,29 @@
+/* Cinematic studio photography: preserve the real material and the full silhouette. */
+.cinematic-site .photo-hero{background:#05080c}
+.cinematic-site .photo-hero>.hero-photo{left:0;display:block}
+.cinematic-site .photo-hero>.hero-photo img{width:100%;max-width:none;height:100%;object-fit:cover;object-position:var(--photo-position,center);mask-image:none}
+.cinematic-site .photo-hero:before{background:linear-gradient(90deg,rgba(3,7,12,.84),rgba(3,7,12,.64) 30%,rgba(3,7,12,.15) 60%,rgba(3,7,12,.02));mask-image:none}
+.cinematic-site .photo-hero:after{background:linear-gradient(0deg,rgba(3,7,12,.55),transparent 42%)}
+.cinematic-site .page-hero.photo-hero>.hero-photo{left:27%}
+.cinematic-site .page-hero.photo-hero>.hero-photo img{width:100%;height:100%;max-width:none;object-fit:contain;object-position:right center;mask-image:none}
+.cinematic-site .photo-frame,.cinematic-site .module-photo,.cinematic-site .editorial-photo{background:#06090d}
+.cinematic-site .photo-frame img,.cinematic-site .module-photo img{object-position:var(--photo-position,76% center)}
+.cinematic-site .photo-frame img[data-image-role="materiales"],.cinematic-site .module-photo img[data-image-role="materiales"]{object-fit:contain}
+.cinematic-site .industry-card.photo-card>.module-photo img{object-fit:contain;object-position:center top}
+.cinematic-site .split-visual.photo-frame{background:#05080c}
+.cinematic-site .split-visual.photo-frame img{object-fit:contain;object-position:center}
+.cinematic-site .photo-cta{background:#05080c}
+.cinematic-site .photo-cta:after{background:linear-gradient(90deg,rgba(3,7,12,.92),rgba(3,7,12,.3))}
+.cinematic-site .photo-cta>.cta-photo img{object-position:right center}
+.cinematic-site .digital-study{background:#060c13}
+.cinematic-site .editorial-photo img{object-fit:contain}
+@media(max-width:940px){
+ .cinematic-site .page-hero.photo-hero>.hero-photo{left:0}
+ .cinematic-site .photo-hero:before{background:linear-gradient(90deg,rgba(3,7,12,.9),rgba(3,7,12,.58) 60%,rgba(3,7,12,.18))}
+}
+@media(max-width:650px){
+ .cinematic-site .page-hero.photo-hero>.hero-photo img{object-fit:cover;object-position:var(--photo-position-mobile,78% center)}
+ .cinematic-site .hero.photo-hero>.hero-photo img{object-fit:cover;object-position:var(--photo-position-mobile,76% center)}
+ .cinematic-site .photo-hero:before{background:linear-gradient(90deg,rgba(3,7,12,.89),rgba(3,7,12,.58)),linear-gradient(0deg,rgba(3,7,12,.24),transparent 60%)}
+ .cinematic-site .photo-hero .hero-desc,.cinematic-site .photo-hero.page-hero p{color:#dce3e9}
+}

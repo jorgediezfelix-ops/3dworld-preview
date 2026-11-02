@@ -1,0 +1,44 @@
+/* Quiet, full-width imagery in place of the procedural 3D demonstration. */
+.atelier-site .service-editorial{
+  position:relative;isolation:isolate;overflow:hidden;background:#080e12;color:#edf3f5;
+  border-block:1px solid #25343d;scroll-margin-top:82px;
+}
+.service-editorial-media{position:absolute;inset:0;margin:0;z-index:-2}
+.service-editorial-media picture{display:block;width:100%;height:100%}
+.service-editorial-media img{
+  display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:72% center;
+}
+.service-editorial:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(90deg,#080e12 0%,#080e12f5 24%,#080e12c9 40%,#080e1240 60%,#080e1200 77%);
+}
+.atelier-site .service-editorial>.container{position:relative;min-height:560px;display:flex;align-items:center;padding-block:88px}
+.service-editorial-copy{width:42%;max-width:520px;min-width:0}
+.atelier-site .service-editorial-kicker{font:500 10px/1.7 var(--font-body);letter-spacing:.15em;color:#aac0cb;margin:0 0 30px}
+.atelier-site .service-editorial h2{font-size:clamp(38px,3.6vw,55px);font-weight:400;line-height:1.1;letter-spacing:-.04em;color:#f0f5f6;margin:0 0 28px}
+.service-editorial h2 em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;color:#d0dde3}
+.atelier-site .service-editorial-description{font-size:15px;line-height:1.9;color:#bacbd4;max-width:420px;margin:0}
+.service-editorial[data-service-editorial="ingenieria-avanzada"] img{object-position:75% center}
+.service-editorial[data-service-editorial="escaneo-inspeccion-3d"] img{object-position:72% center}
+@media(min-width:1600px){.atelier-site .service-editorial>.container{min-height:620px}}
+@media(max-width:900px) and (min-width:701px){
+  .atelier-site .service-editorial>.container{min-height:480px;padding-block:65px}
+  .service-editorial-copy{width:46%}
+  .service-editorial:before{background:linear-gradient(90deg,#080e12 0%,#080e12eb 30%,#080e1280 53%,transparent 82%)}
+}
+@media(max-width:700px){
+  .atelier-site .service-editorial>.container{min-height:0;padding-block:52px 28px}
+  .service-editorial-copy{width:100%;max-width:none}
+  .atelier-site .service-editorial-kicker{font-size:9px;margin-bottom:24px}
+  .atelier-site .service-editorial h2{font-size:clamp(36px,8vw,46px);margin-bottom:24px}
+  .atelier-site .service-editorial-description{font-size:14px;max-width:540px}
+  .service-editorial:before{display:none}
+  .service-editorial-media{position:relative;inset:auto;z-index:0;aspect-ratio:16/10}
+  .service-editorial-media:before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,#080e12,transparent 28%)}
+  .service-editorial-media img{object-position:72% center}
+}
+@media(forced-colors:active){
+  .service-editorial-media,.service-editorial:before{display:none}
+  .atelier-site .service-editorial{background:Canvas;border-color:CanvasText}
+  .atelier-site .service-editorial :is(h2,h2 em,p){color:CanvasText}
+}

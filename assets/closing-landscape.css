@@ -1,0 +1,30 @@
+/* One uninterrupted industrial image behind the briefing, contact CTA and footer. */
+.atelier-site footer.brand-footer.continuous-footer{
+  background-color:#05111c;
+  background-image:linear-gradient(180deg,rgba(4,16,27,.5),rgba(4,16,27,.32) 60%,rgba(4,16,27,.24)),url('footer-industrial-blue.webp');
+  background-position:center bottom;
+  background-size:cover;
+  background-repeat:no-repeat;
+  border-top:1px solid rgba(200,219,235,.16);
+}
+.atelier-site .continuous-footer>[data-footer-intro]{
+  background:transparent;
+  border:0;
+  isolation:auto;
+}
+.atelier-site .continuous-footer>[data-footer-intro]:before,
+.atelier-site .continuous-footer>[data-footer-intro]:after,
+.atelier-site .continuous-footer>[data-footer-intro]>.balance-close-photo{display:none}
+.atelier-site .continuous-footer>.container{background:transparent}
+.atelier-site .continuous-footer>[data-footer-intro]+.container>.footer-cta{
+  border-top:1px solid rgba(200,219,235,.18);
+}
+@media(forced-colors:active){
+  .atelier-site footer.brand-footer.continuous-footer{background:Canvas;color:CanvasText}
+}
+
+@media(max-width:700px){
+ .atelier-site footer.brand-footer.continuous-footer{
+  background-image:linear-gradient(180deg,rgba(4,16,27,.5),rgba(4,16,27,.32) 60%,rgba(4,16,27,.24)),url('footer-industrial-blue-mobile.webp');
+ }
+}

@@ -1,0 +1,190 @@
+/* One photographic rhythm: equal visual weight, mineral paper and blue-black ink. */
+.visual-balance-site{
+  --balance-paper:#f8faf9;
+  --balance-mineral:#eef3f4;
+  --balance-ink:#132e3c;
+  --balance-navy:#0a1b27;
+  --balance-line:#d4dfe3;
+  --paper:var(--balance-paper);
+  background:var(--balance-paper);
+}
+.visual-balance-site main>.soft,
+.visual-balance-site .precision-section.soft{background:var(--balance-mineral)}
+.visual-balance-site :is(.precision-card,.material-card,.tech-card){border-color:var(--balance-line)}
+.visual-balance-site .page-section-nav{background:var(--balance-paper);padding-block:16px}
+.visual-balance-site .page-section-nav>.container{display:flex;flex-wrap:wrap;align-items:center;gap:8px 28px}
+.visual-balance-site .page-section-nav>.container>span{font:10px var(--font-body);color:#5a737f;margin-right:auto}
+.visual-balance-site .page-section-nav a{margin:0}
+.visual-balance-site :is(section[id],article[id]){scroll-margin-top:110px}
+
+/* Reused images receive the same blue-grey treatment. Commercial product photos
+   are deliberately outside these selectors so their colors remain accurate. */
+.balance-media{display:block;margin:0;background:var(--balance-navy);overflow:hidden}
+.balance-media>img{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:var(--balance-focus,center);filter:saturate(.68)}
+.visual-balance-site :is(.module-photo,.tech-visual,.atelier-study-image) img{filter:saturate(.78)}
+.visual-balance-site img[data-image-role="ingenieria"]{object-position:76% center}
+.visual-balance-site img[data-image-role="metrologia"]{object-position:73% center}
+
+/* A complete row always has equal image heights and aligned content edges. */
+.visual-balance-site .precision-grid{align-items:stretch;gap:24px}
+.visual-balance-site .precision-grid>.balance-photo-card{
+  padding:0 27px 28px;overflow:hidden;background:var(--balance-paper);border-radius:5px;
+  display:flex;flex-direction:column;min-width:0;
+}
+.balance-card-heading{
+  position:relative;isolation:isolate;min-height:240px;margin:0 -27px 25px;padding:25px 27px;
+  display:flex;flex-direction:column;justify-content:space-between;gap:32px;background:var(--balance-navy);
+}
+.balance-card-photo{position:absolute;inset:0;z-index:-2}
+.balance-card-heading:after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(180deg,#07172255 0%,#07172242 24%,#071722d9 68%,#071722f5 100%);
+}
+.visual-balance-site .balance-card-heading :is(h2,h3){color:#f3f8fa;font-size:27px;line-height:1.16;letter-spacing:-.035em;margin:0;max-width:100%}
+.visual-balance-site .balance-card-heading .eyebrow{color:#d2e8f3;font-size:9px;letter-spacing:.11em;margin:0;align-self:flex-start;background:#071722de;padding:6px 8px;border:1px solid #6a8a9d55}
+.visual-balance-site .balance-photo-card>p{font-size:14px;line-height:1.85;color:#506875}
+.visual-balance-site .balance-photo-card>.text-link{margin-top:auto;padding-top:10px}
+.visual-balance-site a.balance-photo-card:hover{border-color:#648ea5}
+
+/* Technical tables keep their full reading width; their introduction gets a
+   second, equally sized visual column rather than a photograph behind text. */
+.balance-section-lead{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:clamp(28px,5vw,76px);margin-bottom:44px}
+.balance-lead-copy{min-width:0}
+.balance-lead-copy .section-head{margin-bottom:25px}
+.balance-lead-copy .section-head h2{font-size:clamp(34px,3.8vw,53px)}
+.balance-lead-copy>p{max-width:none}
+.balance-lead-copy>:last-child{margin-bottom:0}
+.balance-lead-photo{aspect-ratio:4/3;border-radius:5px;position:relative}
+.balance-lead-photo:after{content:"";position:absolute;inset:0;background:#0c315018;pointer-events:none}
+
+/* Balanced home galleries and preview images. */
+.visual-balance-site .atelier-gallery{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:none;gap:24px}
+.visual-balance-site .atelier-gallery>.atelier-capability,
+.visual-balance-site .atelier-gallery>.atelier-capability:first-child{grid-column:auto;grid-row:auto;min-height:460px;padding:28px}
+.visual-balance-site .atelier-gallery>.atelier-capability h3{font-size:34px;line-height:1.12}
+.visual-balance-site .atelier-capability:after{background:linear-gradient(180deg,#0717225c 0%,#07172225 25%,#071722e6 76%,#071722f5 100%)}
+.visual-balance-site .atelier-material-grid,
+.visual-balance-site .atelier-method-grid,
+.visual-balance-site .atelier-studies-grid,
+.visual-balance-site .concept-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+.visual-balance-site .atelier-study:nth-child(2),
+.visual-balance-site .concept-gallery .portfolio-card:nth-child(even){margin-top:0}
+.visual-balance-site :is(.atelier-study-image,.concept-gallery .project-visual){aspect-ratio:4/3}
+.visual-balance-site .atelier-journal-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.visual-balance-site .atelier-journal-item{
+  display:flex;flex-direction:column;gap:0;align-items:stretch;padding:0 25px 25px;
+  border:1px solid var(--balance-line);border-radius:5px;overflow:hidden;min-width:0;background:var(--balance-paper);
+}
+.balance-journal-photo{aspect-ratio:16/10;margin:0 -25px 24px}
+.visual-balance-site .atelier-journal-item>small{margin-bottom:16px}
+.visual-balance-site .atelier-journal-item h3{font-size:27px;margin-bottom:15px}
+.visual-balance-site .atelier-journal-item p{max-width:none;font-size:14px;margin-bottom:24px}
+.visual-balance-site .atelier-journal-item>span{align-self:flex-end;margin-top:auto}
+
+/* Services, technologies and industries use the same framing on both sides. */
+.visual-balance-site .service-directory .detail-card{grid-template-columns:repeat(2,minmax(0,1fr));gap:48px}
+.visual-balance-site .service-directory-media{aspect-ratio:4/3}
+.visual-balance-site .detail-list{align-items:stretch}
+.visual-balance-site .detail-list>.detail-card>.module-photo{aspect-ratio:16/10}
+.visual-balance-site :is(.tech-visual,.material-card>.module-photo){aspect-ratio:16/10;height:auto}
+.visual-balance-site .tech-visual picture,
+.visual-balance-site .tech-visual img{width:100%;height:100%;object-fit:cover}
+.visual-balance-site .technology-directory{align-items:stretch;gap:24px}
+.visual-balance-site .tech-card{height:100%;display:flex;flex-direction:column}
+.visual-balance-site .tech-info{flex:1;display:flex;flex-direction:column}
+.visual-balance-site .tech-info>.text-link{margin-top:auto;padding-top:15px}
+.visual-balance-site .industry-grid{gap:24px;align-items:stretch}
+.visual-balance-site .industry-card.photo-card{min-height:390px}
+
+/* A consistent photographic closing module, with opaque text protection. */
+.visual-balance-site .balance-close{
+  position:relative;isolation:isolate;overflow:hidden;background:var(--balance-navy);color:#edf5f8;
+  border-top:1px solid #4c697b;border-bottom:1px solid #4c697b;
+}
+.balance-close-photo{position:absolute;inset:0;z-index:-2}
+.balance-close-photo img{object-position:right center}
+.balance-close:before{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(90deg,#081c28f5 0%,#081c28eb 46%,#081c28ba 100%);
+}
+.visual-balance-site .balance-close>.container{position:relative}
+.visual-balance-site .balance-close :is(h2,h3){color:#f0f7fa}
+.visual-balance-site .balance-close :is(p,.project-next-copy,.project-next-label,.eyebrow,.form-hint){color:#cedfe8}
+.visual-balance-site .balance-close .precision-note{background:transparent;border:0;padding:0}
+.visual-balance-site .balance-close .project-next-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.visual-balance-site .balance-close .project-next-grid>article{border-top:1px solid #7390a16b;padding-top:20px;min-width:0}
+.visual-balance-site .balance-close .project-next-action{margin-top:30px}
+.visual-balance-site .balance-close a.text-link{color:#e1f3fc}
+.visual-balance-site .balance-close .btn.primary{color:#fff}
+.visual-balance-site .balance-close+.site-footer{border-top:1px solid #4c697b}
+
+/* New resin photography balances the existing shop category cards. */
+.visual-balance-site .store-path{min-height:360px}
+.balance-path-photo{position:absolute;inset:0;z-index:-1}
+.balance-path-photo img{opacity:.72}
+.visual-balance-site .store-path:nth-child(3):after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#102938de,#1029381f)}
+.visual-balance-site .store-resin-guide.balance-close:before{background:linear-gradient(90deg,#081c28f2,#081c28dc 60%,#081c28d1)}
+.visual-balance-site .store-resin-guide.balance-close li{border-color:#65849880}
+.visual-balance-site .legal-page{background:var(--balance-paper)}
+.visual-balance-site .lead-form{background:var(--balance-mineral);border-color:var(--balance-line)}
+
+@media(max-width:1000px){
+  .visual-balance-site .atelier-gallery>.atelier-capability,
+  .visual-balance-site .atelier-gallery>.atelier-capability:first-child{min-height:430px;padding:23px}
+  .visual-balance-site .atelier-gallery>.atelier-capability h3{font-size:28px}
+  .visual-balance-site .atelier-capability p{font-size:13px}
+  .visual-balance-site .balance-card-heading{min-height:220px}
+  .visual-balance-site .balance-card-heading :is(h2,h3){font-size:24px}
+  .visual-balance-site .service-directory .detail-card{gap:30px}
+}
+@media(max-width:700px){
+  .visual-balance-site .page-section-nav>.container{gap:4px 22px}
+  .visual-balance-site .page-section-nav>.container>span{flex-basis:100%;margin-bottom:4px}
+  .visual-balance-site .balance-section-lead,
+  .visual-balance-site .atelier-gallery,
+  .visual-balance-site .atelier-journal-list,
+  .visual-balance-site .atelier-material-grid,
+  .visual-balance-site .atelier-method-grid,
+  .visual-balance-site .atelier-studies-grid,
+  .visual-balance-site .concept-gallery,
+  .visual-balance-site .service-directory .detail-card{grid-template-columns:1fr}
+  .visual-balance-site .balance-section-lead{gap:28px;margin-bottom:30px}
+  .visual-balance-site .balance-lead-photo{aspect-ratio:16/10}
+  .visual-balance-site .balance-lead-copy .section-head h2{font-size:35px}
+  .visual-balance-site .precision-grid{grid-template-columns:1fr;gap:22px}
+  .visual-balance-site .balance-card-heading{min-height:230px}
+  .visual-balance-site .balance-card-heading :is(h2,h3){font-size:28px}
+  .visual-balance-site .atelier-gallery>.atelier-capability,
+  .visual-balance-site .atelier-gallery>.atelier-capability:first-child{min-height:390px;padding:27px}
+  .visual-balance-site .atelier-gallery>.atelier-capability h3{font-size:34px}
+  .visual-balance-site .atelier-capability p{font-size:14px}
+  .visual-balance-site .balance-close .project-next-grid{grid-template-columns:1fr;gap:20px}
+  .visual-balance-site .balance-close:before{background:#081c28e6}
+  .visual-balance-site .balance-close .section-head{margin-bottom:28px}
+  .visual-balance-site .industry-card.photo-card{min-height:390px}
+}
+@media(forced-colors:active){
+  .balance-media,.balance-card-heading:after,.balance-close:before{display:none}
+  .visual-balance-site .balance-card-heading,
+  .visual-balance-site .balance-close{background:Canvas;color:CanvasText;border:1px solid CanvasText}
+  .visual-balance-site .balance-card-heading *,
+  .visual-balance-site .balance-close *{color:CanvasText!important}
+}
+
+/* Full-bleed media (29-10-2026): photos cover their module; no borders or inner frames. */
+.visual-balance-site .page-hero.photo-hero>.hero-photo img{-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 24%);mask-image:linear-gradient(90deg,transparent 0,#000 24%)}
+.visual-balance-site .editorial-photo{position:relative;border:0;border-radius:6px;background:#06090d}
+.visual-balance-site .editorial-photo img{object-fit:cover}
+.visual-balance-site .editorial-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 20px 14px;background:linear-gradient(180deg,transparent,rgba(6,9,13,.85));color:#e7eef2}
+.visual-balance-site .atelier-equipment{position:relative;isolation:isolate;overflow:hidden;background:#0d1418;color:#fff;padding:96px 0;border:0}
+.visual-balance-site .atelier-equipment .atelier-equipment-photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:72% center;z-index:-2;mix-blend-mode:normal;border-radius:0;background:none}
+.visual-balance-site .atelier-equipment:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,13,17,.94) 0%,rgba(8,13,17,.78) 42%,rgba(8,13,17,.12) 78%)}
+.visual-balance-site .atelier-equipment-inner{display:block}
+.visual-balance-site .atelier-equipment-inner>div{max-width:560px}
+.visual-balance-site .atelier-equipment .atelier-eyebrow{color:#afc6d1}
+.visual-balance-site .atelier-equipment h2{color:#fff;font-size:clamp(30px,3.6vw,44px)}
+.visual-balance-site .atelier-equipment p{color:#d3dde2;font-size:16px}
+.visual-balance-site .atelier-equipment .hero-actions{margin-top:26px}
+.visual-balance-site .atelier-equipment .btn.ink{background:#fff;color:#172024}
+.visual-balance-site .atelier-equipment .text-link{color:#fff}
+@media (max-width:650px){.visual-balance-site .atelier-equipment{padding:64px 0}.visual-balance-site .atelier-equipment:before{background:linear-gradient(180deg,rgba(8,13,17,.9),rgba(8,13,17,.7))}}

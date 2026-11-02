@@ -1,0 +1,147 @@
+/* Nosotros (scripts/redesign_nosotros.py): service chain, comparison, work thread, evidence scale,
+   inspection plan and principles. One loud element, the thread on the night band; the rest stays quiet. */
+.about-page{--about-ink:#172024;--about-steel:#55636a;--about-line:#d3dde2;--about-paper:#f8faf9;--about-mist:#eef3f4;
+ --about-night:#09131e;--about-signal:#175cd3;--about-ice:#b8daee;--about-serif:'Instrument Serif',Georgia,serif}
+.about-section{padding:clamp(88px,9vw,144px) 0;scroll-margin-top:150px}
+.about-section.is-mist{background:var(--about-mist)}
+.about-section.is-night{background:var(--about-night);color:#e6eef2}
+.about-page .about-section h2{margin:0;font-weight:400;font-size:clamp(36px,4.3vw,62px);line-height:1.04;letter-spacing:-.035em;color:inherit;max-width:16ch}
+.about-page .about-section h3{margin:0;font-weight:500;letter-spacing:-.015em}
+:where(.about-page .about-section) p{margin:0}
+.about-page .about-section dt,.about-page .about-section dd{margin:0;font-size:inherit;letter-spacing:normal;text-transform:none;line-height:inherit;color:inherit}
+.about-page .about-section th,.about-page .about-section td{font:inherit;letter-spacing:normal;text-transform:none;background:none}
+.about-page .about-section .text-link{margin-top:32px}
+.about-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.about-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,5vw,88px);align-items:end;margin-bottom:clamp(44px,5.5vw,80px)}
+.about-page .about-head p{max-width:44ch;font-size:18px;line-height:1.6;color:var(--about-steel)}
+
+/* Who we are: statement, then the service chain on one rule */
+.about-intro-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(28px,6vw,104px);align-items:start}
+.about-page .about-intro h2{font-size:clamp(40px,5.1vw,76px);line-height:1.02;letter-spacing:-.042em;max-width:13ch}
+.about-page .about-lede{font-size:21px;line-height:1.55;color:var(--about-ink);margin-bottom:20px}
+.about-page .about-intro-copy p+p{font-size:17px;line-height:1.7;color:var(--about-steel)}
+.about-chain{list-style:none;margin:clamp(72px,9vw,128px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--about-ink)}
+.about-chain li{position:relative;padding:36px clamp(16px,2.4vw,40px) 0 0}
+.about-chain li::before{content:'';position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:var(--about-paper);border:1px solid var(--about-ink)}
+.about-chain li:first-child::before{background:var(--about-signal);border-color:var(--about-signal)}
+.about-page .about-chain h3{font:italic 400 clamp(36px,3.3vw,52px)/1 var(--about-serif);letter-spacing:-.01em;margin-bottom:16px}
+.about-page .about-chain p{max-width:30ch;font-size:16px;line-height:1.65;color:var(--about-steel)}
+
+/* Comparison: the 3DWORLD column rises out of the table */
+.about-compare-scroll{overflow-x:auto;scrollbar-width:thin}
+.about-compare-scroll:focus-visible,.about-sheet-scroll:focus-visible{outline:2px solid var(--about-signal);outline-offset:4px}
+.about-compare-table{width:100%;min-width:820px;border-collapse:separate;border-spacing:0;font-size:16px;line-height:1.55}
+.about-page .about-compare-table th,.about-page .about-compare-table td{padding:22px 26px;text-align:left;vertical-align:top;border-bottom:1px solid var(--about-line);color:var(--about-steel)}
+.about-page .about-compare-table thead th{padding:20px 26px;font-size:15px;font-weight:500;border-bottom:1px solid var(--about-ink);color:var(--about-ink)}
+.about-page .about-compare-table tbody th{width:19%;font-weight:500;color:var(--about-ink)}
+.about-page .about-compare-table td{width:27%}
+.about-page .about-compare-table .is-us{background:#fff;color:var(--about-ink);border-bottom-color:#e4ebee;box-shadow:inset 1px 0 0 var(--about-line),inset -1px 0 0 var(--about-line)}
+.about-page .about-compare-table thead .is-us{background:var(--about-night);color:#fff;border-radius:14px 14px 0 0;border-bottom-color:var(--about-night);font-size:17px;box-shadow:none}
+.about-page .about-compare-table tbody tr:last-child .is-us{border-radius:0 0 14px 14px;box-shadow:inset 1px 0 0 var(--about-line),inset -1px 0 0 var(--about-line),inset 0 -1px 0 var(--about-line)}
+.about-page .about-compare-table tbody tr:last-child>*{border-bottom:0}
+
+/* The work thread: sticky intro, five stages on the storytelling rail */
+.about-method-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(44px,7vw,128px);align-items:start}
+.about-method-intro{position:sticky;top:170px}
+.about-page .about-method h2{color:#fff;max-width:11ch}
+.about-page .about-method-intro p{margin-top:28px;max-width:36ch;font-size:18px;line-height:1.65;color:#9fb3be}
+.about-page .about-method .text-link{color:var(--about-ice);border-color:#3a5263}
+.about-page .about-method .text-link:hover{color:#fff;border-color:#fff}
+.about-thread{list-style:none;margin:0;padding:0;position:relative;--thread-x:28px;--thread-top:28px;--thread-bottom:72px;--thread-track:#22374a;--thread-fill:var(--about-ice);--thread-line:58%}
+.about-thread::before{content:'';position:absolute;left:var(--thread-x);top:var(--thread-top);bottom:var(--thread-bottom);width:1px;background:var(--thread-track)}
+.about-thread li{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:clamp(20px,3vw,36px);padding-bottom:72px}
+.about-thread li:last-child{padding-bottom:0}
+.about-step{position:relative;z-index:1;display:grid;place-items:center;width:56px;height:56px;border-radius:50%;border:1px solid #2c4356;background:var(--about-night);
+ font:400 22px/1 var(--about-serif);color:#7d94a2;font-variant-numeric:lining-nums;transition:background .35s ease,color .35s ease,border-color .35s ease,box-shadow .35s ease}
+.about-thread li.is-reached .about-step{background:var(--about-ice);border-color:var(--about-ice);color:var(--about-night);box-shadow:0 0 0 7px #b8daee1f}
+.about-page .about-thread h3{font-size:clamp(28px,2.7vw,40px);font-weight:400;letter-spacing:-.025em;color:#fff;margin:8px 0 14px}
+.about-page .about-step-lead{max-width:50ch;font-size:18px;line-height:1.62;color:#c7d5dc}
+.about-step-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 36px;margin:26px 0 0;padding-top:22px;border-top:1px solid #1d3242}
+.about-page .about-step-facts dt{font-size:13px;font-weight:500;color:var(--about-ice);margin-bottom:6px}
+.about-page .about-step-facts dd{font-size:15px;line-height:1.62;color:#9fb3be}
+
+/* Evidence: four kinds, a meter that fills with certainty */
+.about-page .about-scale-key{display:flex;justify-content:space-between;margin-bottom:14px;font-size:13px;color:var(--about-steel)}
+.about-scale{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(20px,2.6vw,40px)}
+.about-scale li{position:relative;padding-top:30px}
+.about-scale li::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;border-radius:3px;
+ background:linear-gradient(90deg,var(--about-signal) calc(var(--level) * 25%),#d6e1e6 calc(var(--level) * 25%))}
+.about-page .about-scale h3{font-size:24px;line-height:1.2;margin-bottom:18px;color:var(--about-ink)}
+.about-page .about-scale p{font-size:15.5px;line-height:1.6;color:var(--about-steel)}
+.about-page .about-scale p+p{margin-top:12px}
+.about-scale p span{display:block;font-size:13px;font-weight:500;color:var(--about-ink);margin-bottom:2px}
+.about-research{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(36px,6vw,104px);align-items:center;margin-top:clamp(88px,10vw,148px)}
+.about-research-photo{margin:0;border-radius:18px;overflow:hidden;aspect-ratio:4/5;background:var(--about-night)}
+.about-research-photo img{display:block;width:100%;height:100%;object-fit:cover}
+.about-page .about-research-copy h3{font-size:clamp(28px,2.6vw,38px);font-weight:400;letter-spacing:-.025em;margin-bottom:18px}
+.about-page .about-research-copy>p{max-width:52ch;font-size:17px;line-height:1.7;color:var(--about-steel)}
+.about-lines{margin:36px 0 0;display:grid;gap:26px}
+.about-lines>div{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:20px;padding-top:24px;border-top:1px solid var(--about-line)}
+.about-page .about-lines dt{font-size:18px;font-weight:500;color:var(--about-ink)}
+.about-page .about-lines dd{font-size:15.5px;line-height:1.65;color:var(--about-steel)}
+
+/* Quality: the method beside the document it produces */
+.about-quality-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,104px);align-items:start}
+.about-page .about-quality-lead{margin-top:28px;max-width:44ch;font-size:18px;line-height:1.65;color:var(--about-steel)}
+.about-quality-steps{list-style:none;counter-reset:qa;margin:40px 0 0;padding:0;display:grid;gap:22px}
+.about-quality-steps li{counter-increment:qa;display:grid;grid-template-columns:44px minmax(0,1fr);row-gap:4px}
+.about-quality-steps li::before{content:counter(qa);grid-row:span 2;font:400 26px/1.05 var(--about-serif);color:var(--about-signal)}
+.about-page .about-quality-steps h3{font-size:18px;color:var(--about-ink)}
+.about-page .about-quality-steps p{font-size:15.5px;line-height:1.62;color:var(--about-steel)}
+.about-page .about-quality-note{margin-top:36px;max-width:46ch;font-size:15px;line-height:1.65;color:var(--about-steel)}
+.about-page .about-quality-note a{color:var(--about-signal);text-decoration:underline;text-underline-offset:4px}
+.about-sheet{margin:0;background:#fff;border:1px solid var(--about-line);border-radius:14px;overflow:hidden;box-shadow:0 30px 60px -38px #0d273a59}
+.about-page .about-sheet figcaption{margin:0;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 24px;background:var(--about-night);color:#9fb3be;font-size:14px}
+.about-sheet-title{color:#fff;font-weight:500}
+.about-sheet-scroll{overflow-x:auto}
+.about-sheet table{width:100%;min-width:640px;border-collapse:collapse;font-size:14.5px;line-height:1.5;font-variant-numeric:tabular-nums}
+.about-page .about-sheet th,.about-page .about-sheet td{padding:16px 20px;text-align:left;vertical-align:top;border-bottom:1px solid #e5ecef;color:var(--about-steel)}
+.about-page .about-sheet thead th{font-size:13px;font-weight:500;color:var(--about-ink);background:#f4f7f8}
+.about-page .about-sheet tbody th{font-weight:500;color:var(--about-ink)}
+.about-page .about-sheet tbody td:nth-child(2){color:var(--about-ink);white-space:nowrap}
+.about-page .about-sheet-foot{padding:16px 24px;font-size:13.5px;color:var(--about-steel)}
+
+/* Principles: type, not tiles */
+.about-principles-list{margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(40px,4.5vw,64px) clamp(28px,4vw,64px)}
+.about-principles-list>div{padding-top:24px;border-top:1px solid var(--about-ink)}
+.about-page .about-principles-list dt{font:italic 400 clamp(28px,2.4vw,36px)/1.08 var(--about-serif);color:var(--about-ink);margin-bottom:14px}
+.about-page .about-principles-list dd{max-width:38ch;font-size:16px;line-height:1.65;color:var(--about-steel)}
+
+@media (max-width:1080px){
+ .about-head,.about-intro-grid,.about-method-grid,.about-quality-grid,.about-research{grid-template-columns:1fr}
+ .about-head{align-items:start}
+ .about-method-intro{position:static}
+ .about-chain{grid-template-columns:repeat(2,minmax(0,1fr));border-top:0;row-gap:48px}
+ .about-chain li{border-top:1px solid var(--about-ink)}
+ .about-scale{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:48px}
+ .about-research-photo{aspect-ratio:16/10}
+ .about-principles-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+ .about-section{padding:76px 0}
+ .about-page .about-intro h2{font-size:clamp(36px,10vw,48px)}
+ .about-page .about-lede{font-size:19px}
+ .about-chain,.about-scale,.about-principles-list{grid-template-columns:1fr}
+ .about-chain{row-gap:40px}
+ /* The comparison becomes one block per question, 3DWORLD first */
+ .about-compare-table{min-width:0}
+ .about-compare-table thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+ .about-compare-table,.about-compare-table tbody,.about-compare-table tr{display:block}
+ .about-compare-table tr{padding:22px 0;border-top:1px solid var(--about-ink)}
+ .about-compare-table tbody tr:last-child{padding-bottom:0}
+ .about-page .about-compare-table th,.about-page .about-compare-table td{display:block;width:auto;padding:0;border:0}
+ .about-page .about-compare-table tbody th{order:-2;width:auto;font-size:18px;margin-bottom:14px}
+ .about-page .about-compare-table td{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,3fr);gap:12px;padding:10px 0;border-top:1px solid var(--about-line);font-size:15px}
+ .about-page .about-compare-table td::before{content:attr(data-label);font-size:13px;color:var(--about-steel)}
+ .about-page .about-compare-table td.is-us,.about-page .about-compare-table tbody tr:last-child .is-us{order:-1;background:#fff;border-radius:10px;padding:12px 14px;border:0;box-shadow:inset 0 0 0 1px var(--about-line)}
+ .about-page .about-compare-table td.is-us::before{color:var(--about-signal);font-weight:500}
+ .about-compare-table tr{display:flex;flex-direction:column}
+ .about-thread{--thread-x:21px;--thread-top:22px}
+ .about-thread li{grid-template-columns:42px minmax(0,1fr);gap:18px;padding-bottom:52px}
+ .about-step{width:42px;height:42px;font-size:18px}
+ .about-page .about-thread h3{margin-top:4px}
+ .about-step-facts{grid-template-columns:1fr;gap:16px}
+ .about-lines>div{grid-template-columns:1fr;gap:8px}
+}
+@media (prefers-reduced-motion:reduce){.about-step{transition:none}}
+@media (forced-colors:active){.about-scale li::before{background:CanvasText}.about-thread li.is-reached .about-step{border-color:Highlight}}
